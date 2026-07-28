@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+# Serve index.html for all routes (SPA / Single Page fallback to prevent 404s)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
